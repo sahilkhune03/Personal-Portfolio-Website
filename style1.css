@@ -1,0 +1,165 @@
+:root {
+    --bg: #0f1724;
+    --accent: #4f46e5;
+    --muted: #6b7280;
+    --glass: rgba(255, 255, 255, 0.06);
+    --card: #ffffff;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+
+body {
+    font-family: inherit;
+    background: linear-gradient(180deg, #071129 0%, #0b1220 100%);
+    color: #e6eef8;
+}
+
+a {
+    transition: all .2s ease
+}
+
+.navbar .nav-link:hover {
+    text-decoration: underline;
+    color: var(--accent);
+}
+
+.hero-section {
+    padding: 4rem 0;
+}
+
+.hero-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.animate-fade {
+    animation: fadeInUp .9s ease both
+}
+
+.stat h3 {
+    margin: 0;
+    font-size: 1.25rem
+}
+
+.stat p {
+    margin: 0;
+    color: var(--muted)
+}
+
+.profile-photo {
+    width: 220px;
+    height: 220px;
+    object-fit: cover
+}
+
+.skill-box {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(2, 6, 23, .6);
+}
+
+.project-card {
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 45px rgba(2, 6, 23, .6);
+}
+
+.short-desc {
+    color: var(--muted)
+}
+
+.map-placeholder {
+    background: var(--glass);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center
+}
+
+
+footer {
+    background: #071022
+}
+
+/* Responsive tweaks */
+@media (max-width: 991px) {
+    .hero-title {
+        font-size: 1.9rem
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 2rem 0
+    }
+}
+
+@keyframes bounceY {
+
+    0%,
+    100% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-6px)
+    }
+}
+
+.btn-primary {
+    animation: bounceY 4s infinite;
+}
+
+
+:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px
+}
+
+.nav-link {
+    position: relative
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -3px;
+    height: 2px;
+    background: var(--accent);
+    transition: right .25s ease
+}
+
+.nav-link:hover::after {
+    right: 0
+}
+
+.card {
+    color: inherit
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 220px
+}
+
+.bg-light {
+    background: linear-gradient(180deg, #0b1220, #0f1724)
+}
