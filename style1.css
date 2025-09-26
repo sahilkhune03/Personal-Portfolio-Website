@@ -96,8 +96,6 @@ a {
 footer {
     background: #071022
 }
-
-/* Responsive tweaks */
 @media (max-width: 991px) {
     .hero-title {
         font-size: 1.9rem
@@ -162,4 +160,5 @@ footer {
 
 .bg-light {
     background: linear-gradient(180deg, #0b1220, #0f1724)
+
 }
